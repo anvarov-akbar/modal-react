@@ -1,0 +1,178 @@
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: url('./Assets/Fonts/roboto-v29-latin_cyrillic-regular.woff2')
+			format('woff2'),
+		url('./Assets/Fonts/roboto-v29-latin_cyrillic-regular.woff')
+			format('woff');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 500;
+	src: url('./Assets/Fonts/roboto-v29-latin_cyrillic-500.woff2')
+			format('woff2'),
+		url('./Assets/Fonts/roboto-v29-latin_cyrillic-500.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 700;
+	src: url('./Assets/Fonts/roboto-v29-latin_cyrillic-700.woff2')
+			format('woff2'),
+		url('./Assets/Fonts/roboto-v29-latin_cyrillic-700.woff') format('woff');
+}
+
+html {
+	height: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	scroll-behavior: smooth;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+body {
+	font-family: 'Roboto', 'Arial', sans-serif;
+	height: 100%;
+	font-size: 16px;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+
+#root {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+.main {
+	flex-grow: 1;
+}
+
+
+
+.modal{
+    position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+    background-color: rgb(0, 240, 240);
+	&--open{
+		display: flex;
+	}
+	&__inner{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+        width: 400px;
+		padding: 50px;
+		background-color:  rgb(13, 112, 116);
+		border-radius: 30px;
+		box-shadow: 5px 5px 15px 5px darkblue;
+		transition: box-shadow 2s, background-color 3s;
+	}
+	&__inner:hover{
+		background-color: azure;
+		box-shadow: 5px 5px 15px 5px rgb(0, 0, 0);
+		transition: box-shadow 2s, background-color 3s;
+	}
+}
+
+.modal:hover{
+	background-color: rgb(133, 96, 96);
+	transition:  background-color 3s;
+}
+
+.modal__close-btn{
+	width: 50px;
+	height: 50px;
+	border: none;
+    color: aqua;
+	font-weight: bold;
+	font-size: 35px;
+	border-radius: 50px;
+	background-color: black;
+	box-shadow:5px 5px 15px 5px darkblue;
+	transition: box-shadow 2s, background-color 3s;
+}
+
+.modal__close-btn:hover{
+	box-shadow: 5px 5px 15px 5px rgb(0, 0, 0);
+	background-color: rgb(18, 179, 179);
+	color: black;
+	transition: box-shadow 2s, background-color 3s;
+}
+
+.btn--ref{
+	border: none;
+	margin: 0;
+	margin-left: 35%;
+	margin-top: 350px;
+	padding: 20px;
+	font-weight: bold;
+	font-size: 30px;
+    border-radius: 40px;
+	color: rgb(0, 7, 7);
+	background-color: rgb(247, 226, 226);
+	box-shadow:5px 5px 15px 5px rgb(4, 4, 26);
+	transition: box-shadow 2s, background-color 3s;
+	&:hover{
+		box-shadow: 5px 5px 15px 5px rgb(0, 0, 0);
+	background-color: rgb(0, 39, 39);
+	color: rgb(236, 212, 212);
+	transition: box-shadow 2s, background-color 3s;
+	}
+}
+
+
+.btn--state{
+	border: none;
+	margin: 0;
+	margin-left: 30px;
+	margin-top: 350px;
+	padding: 20px;
+	font-weight: bold;
+	font-size: 30px;
+	border-radius: 40px;
+	color: aqua;
+	background-color: rgb(27, 0, 77);
+	box-shadow:5px 5px 15px 5px rgb(146, 146, 192);
+	transition: box-shadow 2s, background-color 3s;
+	&:hover{
+		box-shadow: 5px 5px 15px 5px rgb(0, 0, 0);
+	background-color: rgb(18, 179, 179);
+	color: black;
+	transition: box-shadow 2s, background-color 3s;
+	}
+}	
